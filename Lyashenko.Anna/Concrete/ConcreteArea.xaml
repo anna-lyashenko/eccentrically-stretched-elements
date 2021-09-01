@@ -1,0 +1,353 @@
+﻿<UserControl x:Class="Lyashenko.Anna.Concrete.ConcreteArea"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lyashenko.Anna.Concrete"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <Grid Background="White">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            
+        </Grid.RowDefinitions>-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.RowSpan="2">
+
+            <Grid ShowGridLines="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="500"/>
+
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="220"/>
+                        <RowDefinition Height="110"/>
+                        <RowDefinition Height="140"/>
+                        <RowDefinition Height="125"/>
+
+                    </Grid.RowDefinitions>
+                    <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6"  CornerRadius="5" Margin="10,0,-399,9" Name="a">
+
+                        <StackPanel Name="sp_solveManager" Grid.Column="0" Grid.Row="0" Margin="0,0,-361,0" />
+                    </Border>
+                    <TextBlock   FontWeight="Medium" Margin="595,27,-345,80"><Run Text="Цветовая схема"/></TextBlock>
+
+                    <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6" Margin="11,1,-398,99" Name="i" >
+                        <TextBlock Text="  Расчет внецентренно растянутых элементов"  FontWeight="Medium" Margin="0,0,10,-1"/>
+                    </Border>
+
+                    <GroupBox Grid.Row="1" BorderThickness="0"   >
+
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6" Margin="3,-2,-2,-2" CornerRadius="5" Name="b">
+                            <Grid Margin="0,0,10,0" >
+                                <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6" Margin="0,0,-9,26" Name="v"  >
+                                    <TextBlock Text="  Вид расчета" Margin="0,0,19,-1" FontWeight="Medium"/>
+                                </Border>
+                                <ComboBox Name="Вид" SelectedIndex="0" SelectionChanged="Вид_SelectionChanged" Height="20" Margin="4,22,52,3"   />
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+
+                    <GroupBox  Grid.Row="2"  BorderThickness="0"  >
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6"  CornerRadius="5" Margin="3,3,-2,4" Name="k">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="40"/>
+                                    <ColumnDefinition Width="90"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0"  >
+                                    <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6"  Height="21" Margin="0,0,-234,0" Name="p"  >
+                                        <TextBlock Text="Характеристики сечения " FontWeight="Medium" Margin="5,0,40,0" />
+                                    </Border>
+                                    <ComboBox  Grid.Row="2" Name="Вид_сечения" SelectedIndex="0"  SelectionChanged="Вид_сечения_SelectionChanged"  Margin="10,7,-141,0" />
+                                    <TextBox  Name="Ширина_сечения"  Height="23" Margin="10,5,0,0"  Width="90" TextChanged="textBoxTextChaned" Background="WhiteSmoke"/>
+                                    <TextBox  Name="Высота_сечения"  Height="23" Margin="10,5,0,0"  Width="90" TextChanged="textBoxTextChaned" Background="WhiteSmoke"/>
+                                    <TextBox  Name="Ширина_полки"  Height="23" Margin="10,10,0,0"  Width="90" TextChanged="textBoxTextChaned" Background="WhiteSmoke"/>
+                                    <TextBox  Name="Высота_полки"  Height="23" Margin="10,5,0,0"  Width="90" TextChanged="textBoxTextChaned" Background="WhiteSmoke"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1"   >
+                                    <TextBlock Text="Вид сечения" Margin="160,30,-231,0" />
+                                    <TextBlock Text="b, см" Margin="5,10,0,0" ToolTip="Ширина" />
+                                    <TextBlock Text="h, см" Margin="5,15,0,0" ToolTip="Высота" />
+                                    <TextBlock Text="bf, см" Margin="5,15,0,0" Name="Shirina" ToolTip="Ширина полки" Grid.Column="4"/>
+                                    <TextBlock Text="hf, см" Margin="5,15,0,0" Name="Visota" ToolTip="Высота полки"/>
+                                </StackPanel>
+                               
+
+                                <StackPanel Grid.Column="3"   >
+                                    
+                                </StackPanel>
+
+                                <Image Source="/Lyashenko.Anna;component/Resources/тавр1.jpg" Grid.ColumnSpan="2" Margin="5,54,-45,10" Name="kart" Grid.Column="2">
+                                    <Image.ToolTip>
+                                        <Image Source="/Lyashenko.Anna;component/Resources/тавр1.jpg" Grid.ColumnSpan="4" />
+                                    </Image.ToolTip>
+
+                                </Image>
+                                <Image Source="/Lyashenko.Anna;component/Resources/тавр2.jpg" Grid.ColumnSpan="2" Margin="8,47,-42,10"  Name="kart1" Grid.Column="2" >
+                                    <Image.ToolTip>
+                                        <Image Source="/Lyashenko.Anna;component/Resources/тавр2.jpg" Grid.ColumnSpan="3"   />
+                                    </Image.ToolTip>
+
+                                </Image>
+
+                                <Image Source="/Lyashenko.Anna;component/Resources/прямо.jpg" Grid.ColumnSpan="3" Margin="32,54,-52,17"  Name="kart3" Grid.Column="1" >
+                                    <Image.ToolTip>
+                                        <Image Source="/Lyashenko.Anna;component/Resources/прямо.jpg" Grid.ColumnSpan="3"   />
+                                    </Image.ToolTip>
+
+                                </Image>
+
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+                    <GroupBox BorderThickness="0" Grid.Row="3" >
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6" Margin="3,0,-2,-6" CornerRadius="5" Name="d" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="94*"/>
+                                    <ColumnDefinition Width="75*"/>
+                                    <ColumnDefinition Width="95*"/>
+                                    <ColumnDefinition Width="74*"/>
+
+                                </Grid.ColumnDefinitions>
+                                <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6" Margin="0,0,1,89" Grid.ColumnSpan="4" Name="r"  >
+                                    <TextBlock Text="  Нагрузка" Margin="0,0,71,0" FontWeight="Medium"/>
+                                </Border>
+                                <ComboBox  Grid.Row="2" Name="Нагрузка" Margin="-25,-25,0,0" Width="300" Height="20" Grid.ColumnSpan="4" SelectedIndex="0" SelectionChanged="Нагрузка_SelectionChanged"  />
+                                <StackPanel  Grid.Column="0" >
+                                    <TextBox  Name="Момент_в_сечении"  Height="23" Width="80"  Margin="0,55,0,0"  TextChanged="textBoxTextChaned" Background="WhiteSmoke" />
+                                    <CheckBox Content="Увеличение несущей способности" ToolTip="Выполняется только если при e'>h0-a'^ 2a'>x>0 (без учета As')" Name="Сжатая_зона" IsChecked="False" IsThreeState="False" Unchecked="Сжатая_зона_Unchecked"  Checked="Сжатая_зона_Checked"  Height="17" Margin="5,5,-211,0"  />
+                                </StackPanel>
+                                <StackPanel  Grid.Column="1">
+                                    <TextBlock Text="М, кН∙м"  Margin="0,57,0,0"  />
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" >
+                                    <TextBox  Name="Продольная_сила"  Height="23" Width="80" Margin="0,55,0,0" TextChanged="textBoxTextChaned" Background="WhiteSmoke" />
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="3" >
+                                    <TextBlock Text="N, кН" Margin="0,57,0,0" />
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+
+
+                    <GroupBox Grid.Row="4" Margin="0,0,0,116" Grid.RowSpan="2" BorderThickness="0"   >
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6" CornerRadius="5" Margin="0,6,0,9"  Name="m">
+                            <StackPanel  >
+                                <Grid  Margin="0,0,0,0">
+                                    <StackPanel>
+                                        <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6" Margin="0,0,1,0" Name="t"   >
+                                            <TextBlock Text="  Расчет" FontWeight="Medium" Margin="0,0,10,0"/>
+                                        </Border>
+                                        <Button Width="120" Height="23" Click="Calculate"  Background="Silver" Margin="-190,5,0,0" FontWeight="Medium">Расчет</Button>
+                                        
+                                        <CheckBox Content="Публикация PDF" Name="Otchet2" IsChecked="False" IsThreeState="False" Unchecked="Otchet2_Unchecked"  Checked="Otchet2_Checked"  Height="17" Margin="-190,5,0,0"  Width="120" />
+                                        <TextBlock Text="Вид отчета:" Margin="10,0,0,0"/>
+                                        <CheckBox Content="Полный" Name="PDF"  IsThreeState="False"  Checked="PDF_Checked"  Height="17"  Width="120"  Margin="-190,0,0,0" Visibility="Hidden"/>
+                                        <CheckBox Content="Компактный"   Name="Otchet1"  IsThreeState="False"  Checked="Otchet1_Checked"  Height="17"   Width="120" Margin="-190,0,0,0" Visibility="Hidden"/>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </GroupBox>
+
+
+                    <GroupBox Grid.Row="4"  BorderThickness="0"  >
+
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6" CornerRadius="5" Margin="1,145,-1,-145" Name="f" >
+
+                            <Grid   Grid.ColumnSpan="2">
+
+                                <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6" Margin="0,0,1,113" Name="u"  >
+                                    <TextBlock Text="  Результаты расчета:" FontWeight="Medium" Margin="0,0,1,0"   />
+                                </Border>
+                                <RichTextBox Margin="10,30,10,28" Name="Результаты" Background="WhiteSmoke" />
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+
+                </Grid>
+
+
+
+
+
+
+                <Grid Grid.Column="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="170"/>
+                        <RowDefinition Height="170"/>
+                        <RowDefinition Height="120"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+
+
+
+                    <Button x:Name="btn_Color" Background="White" Click="Color" Height="20" Width="30"  Margin="230,-100,0,0">
+                    </Button>
+
+                    <GroupBox Grid.Row="1"  BorderThickness="0"  >
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6" CornerRadius="5" Margin="0,-53,94,0" Name="z">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" >
+                                    <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6" Margin="0,0,-294,0" Height="21" Name="o" >
+
+                                        <TextBlock Text="  Армирование" Margin="0,2,17,0"  FontWeight="Medium"  />
+
+                                    </Border>
+                                    <ComboBox  Grid.Row="2" Name="SteelClass1"  Width="90" Margin="7,7,0,0"  />
+                                    <TextBox  Name="Модуль_упругости_арматуры"  Height="23" Margin="7,7,0,0" Width="90" TextChanged="textBoxTextChaned" Text="200000" Background="WhiteSmoke"/>
+                                    <TextBox  Name="Площадь_растянутой_арматуры"  Text="0" Height="23"  Width="90"  TextChanged="textBoxTextChaned" Margin="7,7,0,0" Background="WhiteSmoke" />
+                                    <TextBox  Name="Площадь_менее_растянутой_арматуры"  Text="0" Height="23"  Width="90" TextChanged="textBoxTextChaned" Margin="7,7,0,0" Background="WhiteSmoke"/>
+                                    <ComboBox  Grid.Row="2"  Name="Диаметр" SelectedIndex="0"  Width="90" Margin="7,7,0,0"   />
+                                    <TextBox  Name="Защитный_слой_бетона_более_растянутой_арматуры"   Height="23" Margin="7,7,0,0" Width="90"  TextChanged="textBoxTextChaned" Background="WhiteSmoke"/>
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" >
+
+                                    <TextBlock Text="Класс стали"  Margin="0,30,0,0" />
+                                    <TextBlock Text="Es, МПа" Margin="0,10,0,0" />
+                                    <TextBlock Text="As, см²" x:Name="Kol" Margin="0,15,-208,0" ToolTip="Площадь растянутой арматуры"/>
+                                    <TextBlock Text="As', см²" x:Name="Kol1" Margin="0,15,-208,0" ToolTip="Площадь менее растянутой арматуры"/>
+                                    <TextBlock Text="d, мм" Name="Diam" Margin="0,15,0,0" ToolTip="Диаметр растянутой арматуры" />
+                                    <TextBlock Text="a, см" Margin="0,10,0,0" ToolTip="Защитный слой растянутой арматуры" />
+
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" >
+                                    <ComboBox  Grid.Row="2" Name="Способ_задания_арматуры" SelectedIndex="0" Width="200"  SelectionChanged="Способ_задания_арматуры_SelectionChanged"  Margin="0,29,0,0"  />
+                                    <ComboBox  Grid.Row="2" Name="Диаметр1" SelectedIndex="0"  Width="90" Margin="-110,98,0,0"   />
+                                    <TextBox  Name="Защитный_слой_бетона_менее_растянутой_арматуры"  Height="23" Margin="-110,7,0,0"  Width="90" TextChanged="textBoxTextChaned" Background="WhiteSmoke"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3" >
+                                    <TextBlock Text="d', мм:"  Name="Diam1" Margin="-110,145,0,0" ToolTip="Диаметр менее растянутой арматуры"  />
+                                    <TextBlock Text="a', см:"  Margin="-110,15,0,0" ToolTip="Защитный слой менее растянутой арматуры"  />
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+
+                    <GroupBox Grid.Row="3"   BorderThickness="0">
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6"  CornerRadius="5" Name="c" Margin="0,-11,90,18" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="90"/>
+                                    <ColumnDefinition Width="60"/>
+                                    <ColumnDefinition Width="60"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+
+                                </Grid.RowDefinitions>
+
+                                <StackPanel  Grid.Column="0">
+                                    <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6"  Height="21" Margin="0,0,-270,0" Name="s"   >
+                                        <TextBlock Text="  Общая информация"  FontWeight="Medium" Margin="0,0,10,0"/>
+                                    </Border>
+                                    <TextBox  Name="Шифр"  Height="23" Margin="5,5,0,0"  Width="120" Background="WhiteSmoke"/>
+                                    <TextBox  Name="Конструкция"  Height="23" Margin="5,5,0,0"  Width="120" Background="WhiteSmoke" />
+                                    <TextBox  Name="Дата"  Height="23" Margin="5,5,0,0"  Width="120"  Background="WhiteSmoke"/>
+
+
+                                </StackPanel>
+                                <Grid Grid.Row="1" >
+                                    <StackPanel Margin="0,93,-181,0">
+                                        <TextBlock Text="Комментарии:" Margin="5,10,77,0"    />
+                                        <TextBox  Name="Комментарии"  Height="50" Margin="5,5,-15,0" TextWrapping="Wrap" Background="WhiteSmoke"/>
+                                    </StackPanel>
+                                </Grid>
+                                <StackPanel Grid.Column="1" >
+                                    <TextBlock  Text="Шифр проекта" Margin="5,30,0,0"    />
+                                    <TextBlock  Text="Конструкция" Margin="5,10,0,0"   />
+                                    <TextBlock Text="Дата" Margin="5,10,0,0"   />
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" >
+                                    <TextBox  Name="Этаж"  Height="23" Margin="0,26,0,0"  Width="60" Background="WhiteSmoke" />
+                                    <TextBox  Name="Оси"  Height="23" Margin="0,5,0,0"  Width="60"  Background="WhiteSmoke"/>
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="3" >
+                                    <TextBlock Text="№ этажа" Margin="5,30,4,0"/>
+                                    <TextBlock Text="Оси" Margin="5,10,10,0"    />
+
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+
+                    <GroupBox  Grid.Row="2"  BorderThickness="0"  >
+                        <Border Background="#FFE0E0E0" BorderBrush="Black" BorderThickness="0.6"  CornerRadius="5" Margin="0,0,88,14" Name="w" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0" >
+                                    <Border Background="Silver" BorderBrush="Black" BorderThickness="0,0,0,0.6"  Height="21" Margin="0,0,-300,0" Name="q"   >
+                                        <TextBlock Text="Характеристики бетона " FontWeight="Medium" Margin="5,0,40,0" />
+                                    </Border>
+                                    <ComboBox   Name="ConcClass"  Width="90" Margin="7,5,0,0"  />
+                                    <!--<TextBox  Name="Коэффициент_условий_работы"  Height="23" Width="120"  TextChanged="textBoxTextChaned" Margin="7,7,0,0" />-->
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" >
+                                    <TextBlock Text="Класс бетона "  Margin="0,30,0,0" />
+                                    <!--<TextBlock Text="γbi" Margin="0,10,0,0" />-->
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" >
+                                    <ComboBox   Name="Гамма1" SelectedIndex="0" Width="50" Margin="0,27,0,0"  />
+                                    <!--<ComboBox   Name="Гамма2" SelectedIndex="0" Width="50" Margin="0,7,0,0"  />-->
+                                    <ComboBox   Name="Гамма3" SelectedIndex="0" Width="50" Margin="0,7,0,0"  />
+
+                                </StackPanel>
+                                <StackPanel Grid.Column="3" >
+                                    <TextBlock   Margin="5,28,0,0" FontSize="13">γ<Run FontSize="7">b1</Run></TextBlock>
+                                    <!--<TextBlock Text="γb2 "  Margin="0,10,0,0" />-->
+                                    <TextBlock  Margin="5,13,0,0" FontSize="13">γ<Run FontSize="7">b3</Run></TextBlock>
+                                </StackPanel>
+                                <StackPanel Grid.Column="4" >
+                                    <TextBox  Name="Гамма4" Text="1"  Height="23" Margin="5,28,0,0"  Width="50" TextChanged="textBoxTextChaned"/>
+                                    <TextBox  Name="Гамма5" Text="1"  Height="23" Margin="5,7,0,0"  Width="50" TextChanged="textBoxTextChaned"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="5" >
+                                    <TextBlock  Margin="5,26,0,0" FontSize="13">γ<Run FontSize="7">b4</Run></TextBlock>
+                                    <TextBlock   Margin="5,15,0,0" FontSize="13">γ<Run FontSize="7">b5</Run></TextBlock>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </GroupBox>
+                    <!--<Button Grid.Row="0" Margin="2" Click="Calculate">Расчет</Button>-->
+                    <!--<TextBox Margin="5,5,5,10" Name="Результаты" TextWrapping="Wrap"  Grid.Row="1"></TextBox>-->
+                </Grid>
+
+
+
+
+            </Grid>
+
+
+        </ScrollViewer>
+    </Grid>
+</UserControl>
