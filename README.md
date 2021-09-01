@@ -9,6 +9,9 @@
 
 [Отчет](https://github.com/anna-lyashenko/eccentrically-stretched-elements/blob/8bb721a38d0a59b470e70c589f9e907d610b64ac/%D0%9E%D1%82%D1%87%D0%B5%D1%82%20%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B5.pdf) о программе.
 [Схема](https://github.com/anna-lyashenko/eccentrically-stretched-elements/blob/b711b49abcf5d5ccbb56806246c3e52a58275b14/Diagram.pdf) работы алгоритма.
+
+Окно приложения:<br>
+![image](https://github.com/anna-lyashenko/eccentrically-stretched-elements/blob/d87c2a4312f760680bfa8e163130bd38cb8182ba/screenshot.jpg)
 ## Структура проекта
 * Lyashenko.Anna - директория с исходным кодом проекта
 * Diagram.pdf - схема работы алгоритма
